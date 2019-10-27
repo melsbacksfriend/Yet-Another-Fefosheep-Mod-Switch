@@ -15,12 +15,10 @@ int main(int argc, char* argv[])
         //Scan all the inputs. This should be done once for each frame
 
     int A = 0;
-    int B = 0;
     int C = 0;
         hidScanInput();
 
         //hidKeysDown returns information about which buttons have been just pressed (and they weren't in the previous frame)
-        u32 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
 
     cout << "YAFSM sWoTCH\n";
     cout << "version 0.6.0\n";
@@ -93,7 +91,6 @@ int main(int argc, char* argv[])
         hidScanInput();
 
         //hidKeysDown returns information about which buttons have been just pressed (and they weren't in the previous frame)
-        u32 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
                 if (A == 1) cout << "Nowe u hav a rel liv Bulbasaur!!!!!" << endl;
                 if (A == 2) cout << "Nowe u hav a rel liv Ivysaur!!!!!" << endl;
                 if (A == 3) cout << "Nowe u hav a rel liv Venusaur!!!!!" << endl;
@@ -918,7 +915,7 @@ int main(int argc, char* argv[])
 
 }
     consoleExit(NULL);
-    gfxExit();
+    fsExit();
     return 0;
 }
 
